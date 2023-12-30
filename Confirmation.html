@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Confirmation Email</title>
+
+    <style>
+        body{
+            background-color: #2F372D;;
+        }
+
+        .container{
+            width: 950px;
+            height: 100px;
+            position:absolute;
+            color: white;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #qr{
+            width: 250px;
+            height: 250px;
+            flex-shrink: 0;
+            position: absolute;
+            top: 50px;
+            left: 16px;
+        }
+
+        .ed-logo{
+            width: 821px;
+            height: 197px;
+            transform: rotate(-90deg);
+            position: absolute;
+            bottom: 170px;
+            top: 705px;
+            right: 395px;
+        }
+        h2{
+            color: #2F372D;
+            font-family: Noto Serif Georgian;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            position: absolute;
+            top: 50px;
+            right: 190px;
+
+        }
+
+
+        h1{
+            color: #859780;
+            font-family: Noto Serif Georgian;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: absolute;
+            top: 160px;
+            left: 380px;
+    
+        }
+
+        .dear-guest{
+            width: 625px;
+            height: 195px;
+            color: #2F372D;
+            font-family: Noto Serif Georgian;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            position: absolute;
+            top: 250px;
+            right: 18px;
+        }
+
+        .reservation-info{
+            width: 628px;
+            height: 232px;
+            color: #2F372D;
+            font-family: Noto Serif Georgian;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: absolute;
+            top: 470px;
+            right: 3px;
+        }
+
+        .important-information{
+            width: 620px;
+            height: 172px;
+            color: #2F372D;
+            font-family: Noto Serif Georgian;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            position: absolute;
+            top: 670px;
+            right: 3px;
+        }
+
+        ul.important-information{
+            padding:2px
+        }
+
+        .address{
+            color: #2F372D;
+            font-family: Noto Serif Georgian;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: absolute;
+            top: 900px;
+            right: 430px;
+        }
+
+        .full-address{
+            display: flex;
+            flex-direction: row;
+            color: #2F372D;
+            font-family: Noto Serif Georgian;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            position: absolute;
+            top: 900px;
+            right: 100px;
+
+        }
+
+        .cancellation{
+            background-color: #F7E6C4;
+            width: 910px;
+            height: 145px;
+            flex-shrink: 0;
+            color: #000;
+            text-align: center;
+            font-family: Noto Serif Georgian;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding: 20px;
+        }
+
+        .cancellation-title{
+            font-size: 22px;
+            font-weight: bolder;
+        }
+
+        .question{
+            background-color: #F7E6C4;
+            width: 910px;
+            height: 145px;
+            flex-shrink: 0;
+            color: #000;
+            text-align: center;
+            font-family: Noto Serif Georgian;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding: 20px;
+        }
+
+        .question-title{
+            font-size: 22px;
+            font-weight: bolder;
+        }
+
+        .design-cake{
+            width: 600px;
+            height: 800px;
+            transform: rotate(30deg);
+            flex-shrink: 0;
+            position: absolute;
+            top: 50px;
+            right: 740px;
+            z-index: -1;
+            
+        }
+
+        .design-hat{
+            width: 1000px;
+            height: 900px;
+            transform: rotate(-30deg);
+            flex-shrink: 0;
+            position: absolute;
+            top: -200px;
+            left: 740px;
+            z-index: -1;
+        }
+
+        .design-fork{
+            width: 300px;
+            height: 900px;
+            transform: rotate(-25deg);
+            flex-shrink: 0;
+            position: absolute;
+            top: 1000px;
+            left: 1074px;
+            z-index: -1;
+        }
+
+        .design-dish{
+            width: 1000px;
+            height: 900px;
+            transform: rotate(-25deg);
+            flex-shrink: 0;
+            position: absolute;
+            top: 1080px;
+            right: 740px;
+            z-index: -1;
+        }
+
+        .design-bottle{
+            width: 800px;
+            height: 800px;
+            transform: rotate(20deg);
+            flex-shrink: 0;
+            position: absolute;
+            top: 1600px;
+            left: 150px;
+            z-index: -1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <div class="container" >
+        <img src="img/texture.svg" alt="card" style="width:100%;">
+        <h2>[Restaurant Name]</h2>
+        <h1>Reservation Confirmation</h1>
+        <p class="dear-guest">Dear [Guest Name],
+            <br><br>Thank you for choosing EasyDine for your upcoming dining experience. 
+            We are delighted to confirm your reservation at [Restaurant Name].
+            <br><br>Below are the details of your booking:</p>
+
+        <p class="reservation-info">
+            Reservation Name: [Guest Name] <br>
+            Date: [Date]<br>
+            Time: [Time]<br>
+            Number of Guests: [Number of Guests]<br>
+            Special Requests: [Any Special Requests]<br>
+            Confirmation #: TOCK-R-ZDDOEDX0
+        </p>
+
+        <ul class="important-information">Important Information:
+            <li>Please arrive at least 15 minutes before your reservation time.</li>
+            <li>In case of any changes or cancellations, please notify us at least [X] hours in advance.</li>
+        </ul>
+        <div class="full-address">
+            [Restaurant Name]<br>
+            Address:<br>
+            Phone Number:<br><br>
+            Get Directions
+                
+            <img src="img/map25.png">
+        </div>  
+        <div >
+            <p class="cancellation">
+                <span class="cancellation-title">Cancellation policy<br></span>
+                Your reservation can be cancelled at any time before the time of the reservation should your plans change. 
+                However, we request that you do so at least 24 hours in advance so Oliver's Restaurant can plan accordingly.
+            </p>
+        </div>
+
+        <div >
+            <p class="question">
+                <span class="question-title">Questions?<br></span>
+                If you have questions about your reservation, contact Oliver's Restaurant by calling [Restaurant Number]. 
+                For help with your account and other questions, please reach out to easydineco@gmail.com.
+            </p>
+        </div>
+        
+
+            <img class="design-cake" src="img/cake.svg">
+            <img class="design-hat" src="img/hat.svg">
+            <img class="design-fork" src="img/fork knife.svg">
+            <img class="design-dish" src="img/dish.svg">
+            <img class="design-bottle" src="img/bottle.svg">
+            <img id="qr" src="img/qr.png">
+            <img class="ed-logo" src="img/fb.png" >
+
+            
+    </div>
+
+</body>
+</html>
